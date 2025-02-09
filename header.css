@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.main {
+  background-image: linear-gradient(rgb(25, 0, 248), rgb(25, 0, 248));
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li a {
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
+
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: rgb(255, 17, 0);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+.content {
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  transform: translateY(-50%);
+  padding: 0 15px;
+}
+
+.content h1 {
+  font-size: 60px;
+  margin-top: 50px;
+}
+
+.content p {
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+button {
+  width: 200px;
+  margin: 20px 10px;
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: 3px solid green;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+button span {
+  height: 100%;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  position: absolute;
+  border-radius: 10px;
+  background: green;
+  transition: 0.5s;
+}
+
+button:hover span {
+  width: 100%;
+}
+
+button:hover {
+  border: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 100%;
+    text-align: left;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

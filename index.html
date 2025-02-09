@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/myintrovert.jpg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom CSS */
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .header-bg {
+        position: relative;
+        background-image: url("assets/images/d8.webp");
+        background-size: 1700px;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #ffffff;
+        text-shadow: 2px 2px 8px rgba(108, 1, 248, 0.7);
+        overflow: hidden;
+      }
+      .header-bg img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .header-bg h1 {
+        font-size: 3.5rem;
+        font-weight: 600;
+      }
+      .header-bg p {
+        font-size: 1.25rem;
+      }
+
+      .category-section img {
+        transition: transform 0.3s ease-in-out;
+      }
+      .category-section img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Color Themes */
+      .category-dasar {
+        background-color: #a8dadc; /* Soft teal */
+        color: #1d3557;
+      }
+      .category-menengah {
+        background-color: #f4a261; /* Warm orange */
+        color: #2a9d8f;
+      }
+      .category-sulit {
+        background-color: #e76f51; /* Coral red */
+        color: #264653;
+      }
+
+      .footer {
+        background-color: #1d3557;
+        color: #a8dadc;
+      }
+
+      .nav-link:hover {
+        color: #f4a261 !important;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <title>My Introvert</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">MY_INTROVERT</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#materi">Materi Pembelajaran</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tentang">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-primary text-dark ms-2"
+                href="login.php"
+                >Sign in</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-primary text-dark ms-2"
+                href="register.php"
+                >Sign up</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header-bg py-5 text-center">
+      <div class="container">
+        <h1 class="fw-bold">Selamat Datang di My Introvert</h1>
+        <p class="lead text-light">
+          Explore Materi Pembelajaran Yang DiRancang Khusus Untuk Anda.
+        </p>
+      </div>
+    </header>
+
+    <!-- Materi Pembelajaran -->
+    <section id="materi" class="container my-5 category-section">
+      <div class="row mb-5 align-items-center category-dasar rounded p-3">
+        <div class="col-md-6">
+          <img
+            src="assets/images/dasar.jpg"
+            class="img-fluid rounded"
+            alt="Dasar"
+          />
+        </div>
+        <div class="col-md-6">
+          <h2>Dasar</h2>
+          <p>
+            Pelajari dasar-dasar interpersonal secara perlahan dan menyenangkan.
+          </p>
+        </div>
+      </div>
+      <div class="row mb-5 align-items-center category-menengah rounded p-3">
+        <div class="col-md-6 order-md-2">
+          <img
+            src="assets/images/professional_meeting(M).jpg"
+            class="img-fluid rounded"
+            alt="Menengah"
+          />
+        </div>
+        <div class="col-md-6 order-md-1">
+          <h2>Menengah</h2>
+          <p>
+            Pengembangan tingkat menengah untuk membangun percaya diri Anda.
+          </p>
+        </div>
+      </div>
+      <div class="row align-items-center category-sulit rounded p-3">
+        <div class="col-md-6">
+          <img
+            src="assets/images/public_speaking(S).jpg"
+            class="img-fluid rounded"
+            alt="Sulit"
+          />
+        </div>
+        <div class="col-md-6">
+          <h2>Sulit</h2>
+          <p>
+            Challenge diri Anda dengan materi yang lebih kompleks dan mendalam.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang" class="container my-5">
+      <h2 class="text-center mb-4">Tentang Kami</h2>
+      <p class="text-center mb-4">
+        Kami hadir untuk membantu Anda tumbuh sebagai individu dengan kemampuan
+        interpersonal yang lebih baik.
+      </p>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="container my-5">
+      <h2 class="text-center mb-4">Kontak Kami</h2>
+      <p class="text-center mb-4" mb-4>
+        Untuk informasi lebih lanjut, silakan hubungi kami melalui email di
+        <a href="mailto:info@myintrovert.com">info@myintrovert.com</a>.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-4">
+      <div class="container">
+        <p>© 2024 My Introvert. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
